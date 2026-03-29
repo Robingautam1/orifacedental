@@ -148,16 +148,18 @@
             </div>
           </div>
 
-          <form class="contact__form" id="contact-form">
+          <form class="contact__form" id="contact-form" novalidate>
             <h3 class="contact__form-title">Request an Appointment</h3>
             <div class="form-group">
-              <input type="text" name="name" id="form-name" placeholder="Your Name" required class="form-input">
+              <input type="text" name="name" id="form-name" placeholder="Your Name" class="form-input">
+              <div class="form-error" id="error-name"></div>
             </div>
             <div class="form-group">
-              <input type="tel" name="phone" id="form-phone" placeholder="Phone Number" required class="form-input">
+              <input type="tel" name="phone" id="form-phone" placeholder="Phone Number" class="form-input">
+              <div class="form-error" id="error-phone"></div>
             </div>
             <div class="form-group">
-              <select name="service" id="form-service" required class="form-input form-select">
+              <select name="service" id="form-service" class="form-input form-select">
                 <option value="" disabled selected>What do you need help with?</option>
                 <option value="general">General Checkup / Cleaning</option>
                 <option value="implants">Dental Implants</option>
@@ -170,11 +172,12 @@
                 <option value="pediatric">Child Dental Care</option>
                 <option value="other">Something Else</option>
               </select>
+              <div class="form-error" id="error-service"></div>
             </div>
             <div class="form-group">
               <input type="text" name="time" id="form-time" placeholder="Preferred Time (e.g., Morning, 3 PM)" class="form-input">
             </div>
-            <button type="submit" class="btn btn--primary btn--full">Send My Request</button>
+            <button type="submit" id="form-submit-btn" class="btn btn--primary btn--full">Send My Request</button>
           </form>
         </div>
       </div>

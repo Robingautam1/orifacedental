@@ -93,17 +93,20 @@
   });
 
   function closeLightbox() {
+    if (!lightbox) return;
     lightbox.classList.remove('lightbox--open');
     document.body.style.overflow = '';
-    lightboxImg.src = '';
+    if (lightboxImg) lightboxImg.src = '';
   }
 
-  lightboxClose.addEventListener('click', closeLightbox);
-  lightbox.addEventListener('click', function (e) {
-    if (e.target === lightbox) {
-      closeLightbox();
-    }
-  });
+  if (lightbox && lightboxClose) {
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', function (e) {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+  }
 
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
@@ -113,34 +116,77 @@
   });
 
   // --- Contact form ---
-  contactForm.addEventListener('submit', function (e) {
-    e.preventDefault();
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
 
-    var name = document.getElementById('form-name').value.trim();
-    var phone = document.getElementById('form-phone').value.trim();
-    var service = document.getElementById('form-service').value;
+      var hasError = false;
+      var nameInput = document.getElementById('form-name');
+      var phoneInput = document.getElementById('form-phone');
+      var serviceInput = document.getElementById('form-service');
+      var submitBtn = document.getElementById('form-submit-btn');
 
-    if (!name || !phone || !service) {
-      return;
-    }
+      var nameErr = document.getElementById('error-name');
+      var phoneErr = document.getElementById('error-phone');
+      var serviceErr = document.getElementById('error-service');
 
-    // Build WhatsApp message
-    var time = document.getElementById('form-time').value.trim();
-    var message = 'Hi, I would like to book an appointment at Oriiface Dental Care.\n\n';
-    message += 'Name: ' + name + '\n';
-    message += 'Phone: ' + phone + '\n';
-    message += 'Service: ' + document.getElementById('form-service').selectedOptions[0].text + '\n';
-    if (time) {
-      message += 'Preferred Time: ' + time + '\n';
-    }
+      // Reset
+      [nameInput, phoneInput, serviceInput].forEach(function(el) { el.classList.remove('is-invalid'); });
+      [nameErr, phoneErr, serviceErr].forEach(function(el) { el.classList.remove('is-visible'); el.textContent = ''; });
 
-    var whatsappUrl = 'https://wa.me/919540670276?text=' + encodeURIComponent(message);
-    window.open(whatsappUrl, '_blank');
+      var name = nameInput.value.trim();
+      var phone = phoneInput.value.trim();
+      var service = serviceInput.value;
 
-    // Show thank you
-    var formEl = this;
-    formEl.innerHTML = '<div style="text-align:center;padding:2rem 0"><h3 style="font-family:var(--font-heading);margin-bottom:0.5rem;color:var(--color-primary)">Request Sent</h3><p style="color:var(--color-text-light)">We will get back to you shortly. You can also reach us at 095406 70276.</p></div>';
-  });
+      if (!name) {
+        nameInput.classList.add('is-invalid');
+        nameErr.textContent = 'Please enter your name.';
+        nameErr.classList.add('is-visible');
+        hasError = true;
+      }
+      
+      if (!phone) {
+        phoneInput.classList.add('is-invalid');
+        phoneErr.textContent = 'Please enter your phone number.';
+        phoneErr.classList.add('is-visible');
+        hasError = true;
+      }
+
+      if (!service) {
+        serviceInput.classList.add('is-invalid');
+        serviceErr.textContent = 'Please select a service.';
+        serviceErr.classList.add('is-visible');
+        hasError = true;
+      }
+
+      if (hasError) return;
+
+      // Show sending state
+      var originalBtnText = submitBtn.textContent;
+      submitBtn.textContent = 'Sending...';
+      submitBtn.style.opacity = '0.7';
+      submitBtn.style.pointerEvents = 'none';
+
+      // Build WhatsApp message
+      var time = document.getElementById('form-time').value.trim();
+      var message = 'Hi, I would like to book an appointment at Oriiface Dental Care.\n\n';
+      message += 'Name: ' + name + '\n';
+      message += 'Phone: ' + phone + '\n';
+      message += 'Service: ' + serviceInput.selectedOptions[0].text + '\n';
+      if (time) {
+        message += 'Preferred Time: ' + time + '\n';
+      }
+
+      // UX Delay for request feeling
+      setTimeout(function() {
+        var whatsappUrl = 'https://wa.me/919540670276?text=' + encodeURIComponent(message);
+        window.open(whatsappUrl, '_blank');
+
+        var formEl = document.getElementById('contact-form');
+        formEl.innerHTML = '<div style="text-align:center;padding:2rem 0"><h3 style="font-family:var(--font-heading);margin-bottom:0.5rem;color:var(--color-primary)">Request Sent</h3><p style="color:var(--color-text-light)">We will get back to you shortly. You can also reach us at 095406 70276.</p></div>';
+      }, 600);
+    });
+  }
 
   // --- Scroll reveal animations ---
   function revealOnScroll() {
