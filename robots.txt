@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://orifacedental.com/sitemap.xml
+Sitemap: https://www.oriifacedental.com/sitemap.xml
