@@ -2,32 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://orifacedental.vercel.app/</loc>
-    <lastmod>2025-03-29</lastmod>
-    <priority>1.0</priority>
     <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <lastmod>2025-04-03</lastmod>
   </url>
   <url>
     <loc>https://orifacedental.vercel.app/about.html</loc>
-    <lastmod>2025-03-29</lastmod>
-    <priority>0.9</priority>
     <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <lastmod>2025-04-03</lastmod>
   </url>
   <url>
     <loc>https://orifacedental.vercel.app/services.html</loc>
-    <lastmod>2025-03-29</lastmod>
-    <priority>0.9</priority>
     <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <lastmod>2025-04-03</lastmod>
   </url>
   <url>
     <loc>https://orifacedental.vercel.app/gallery.html</loc>
-    <lastmod>2025-03-29</lastmod>
-    <priority>0.7</priority>
     <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <lastmod>2025-04-03</lastmod>
   </url>
   <url>
     <loc>https://orifacedental.vercel.app/contact.html</loc>
-    <lastmod>2025-03-29</lastmod>
-    <priority>0.8</priority>
     <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <lastmod>2025-04-03</lastmod>
+  </url>
+  <url>
+    <loc>https://orifacedental.vercel.app/services/general-dentistry.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2025-04-03</lastmod>
+  </url>
+  <url>
+    <loc>https://orifacedental.vercel.app/services/dental-implants.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2025-04-03</lastmod>
+  </url>
+  <url>
+    <loc>https://orifacedental.vercel.app/services/root-canal-therapy.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2025-04-03</lastmod>
+  </url>
+  <url>
+    <loc>https://orifacedental.vercel.app/services/smile-design.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2025-04-03</lastmod>
+  </url>
+  <url>
+    <loc>https://orifacedental.vercel.app/services/orthodontics.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2025-04-03</lastmod>
+  </url>
+  <url>
+    <loc>https://orifacedental.vercel.app/services/oral-maxillofacial-surgery.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2025-04-03</lastmod>
+  </url>
+  <url>
+    <loc>https://orifacedental.vercel.app/services/cosmetic-dentistry.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2025-04-03</lastmod>
+  </url>
+  <url>
+    <loc>https://orifacedental.vercel.app/services/emergency-dental-care.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2025-04-03</lastmod>
+  </url>
+  <url>
+    <loc>https://orifacedental.vercel.app/services/pediatric-dentistry.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <lastmod>2025-04-03</lastmod>
   </url>
 </urlset>

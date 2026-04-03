@@ -32,22 +32,21 @@
 
   <link rel="stylesheet" href="style.css?v=3">
 
-  <!-- TO DO: Submit https://orifacedental.vercel.app/sitemap.xml to Google Search Console after deployment. Also verify ownership via Google Search Console HTML tag method and add the verification meta tag here. -->
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": ["Dentist", "LocalBusiness", "MedicalBusiness"],
   "@id": "https://orifacedental.vercel.app",
   "name": "Oriiface Dental Care & Maxillofacial Center",
-  "alternateName": "Oriiface Dental Rohtak",
-  "description": "Best dental clinic in Rohtak led by Dr. Vikramjeet, MDS Oral and Maxillofacial Surgeon with 12+ years of experience. Serving Rohtak, Haryana with general dentistry, implants, RCT, smile design, orthodontics and oral surgery.",
+  "alternateName": ["Oriiface Dental Rohtak", "Orifacedental Rohtak", "Best Dentist Rohtak"],
+  "description": "Specialist dental clinic in Rohtak led by Dr. Vikramjeet, MDS Oral & Maxillofacial Surgeon (PGIMS Rohtak). Expert in dental implants, root canal, smile design, orthodontics and oral surgery in Rohtak, Haryana.",
   "url": "https://orifacedental.vercel.app",
-  "telephone": "+91-9540670276",
+  "telephone": ["+91-9540670276", "+91-7206263981"],
   "priceRange": "₹₹",
   "currenciesAccepted": "INR",
   "paymentAccepted": "Cash, UPI, Card",
-  "image": "https://orifacedental.vercel.app/images/clinic.jpg",
-  "logo": "https://orifacedental.vercel.app/images/logo.png",
+  "image": "https://orifacedental.vercel.app/images/og-cover.jpg",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "19, Delhi Road, Delhi Bypass Chowk",
@@ -66,7 +65,13 @@
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
       "opens": "09:00",
-      "closes": "17:00"
+      "closes": "14:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "17:00",
+      "closes": "21:00"
     }
   ],
   "aggregateRating": {
@@ -98,30 +103,80 @@
   ],
   "medicalSpecialty": "Dentistry",
   "availableService": [
-    {"@type": "MedicalProcedure", "name": "General Dentistry"},
-    {"@type": "MedicalProcedure", "name": "Dental Implants"},
-    {"@type": "MedicalProcedure", "name": "Root Canal Therapy"},
-    {"@type": "MedicalProcedure", "name": "Smile Design"},
-    {"@type": "MedicalProcedure", "name": "Orthodontics"},
-    {"@type": "MedicalProcedure", "name": "Oral and Maxillofacial Surgery"},
-    {"@type": "MedicalProcedure", "name": "Cosmetic Dentistry"},
-    {"@type": "MedicalProcedure", "name": "Emergency Dental Care"},
-    {"@type": "MedicalProcedure", "name": "Pediatric Dentistry"}
+    {"@type": "MedicalProcedure", "name": "General Dentistry Rohtak"},
+    {"@type": "MedicalProcedure", "name": "Dental Implants Rohtak"},
+    {"@type": "MedicalProcedure", "name": "Root Canal Treatment Rohtak"},
+    {"@type": "MedicalProcedure", "name": "Smile Design Rohtak"},
+    {"@type": "MedicalProcedure", "name": "Orthodontics Braces Rohtak"},
+    {"@type": "MedicalProcedure", "name": "Oral and Maxillofacial Surgery Rohtak"},
+    {"@type": "MedicalProcedure", "name": "Cosmetic Dentistry Rohtak"},
+    {"@type": "MedicalProcedure", "name": "Emergency Dental Care Rohtak"},
+    {"@type": "MedicalProcedure", "name": "Pediatric Dentistry Rohtak"}
   ],
   "hasMap": "https://maps.google.com/?q=Oriiface+Dental+Care+Rohtak",
   "sameAs": [
     "https://www.google.com/maps/place/Oriiface+dental+care"
   ],
   "founder": {
-    "@type": "Person",
+    "@type": "Physician",
     "name": "Dr. Vikramjeet",
     "jobTitle": "Consultant Oral and Maxillofacial Surgeon",
-    "description": "BDS, MDS - Oral and Maxillofacial Surgeon with 12+ years of experience. Ex-Resident PGIMS Rohtak, Ex-Senior Resident JLNMCH.",
+    "description": "BDS, MDS (PGIMS Rohtak) - Oral and Maxillofacial Surgeon. Ex-Senior Resident JLNMCH.",
+    "alumniOf": "PGIMS Rohtak",
+    "medicalSpecialty": "Oral and Maxillofacial Surgery",
     "worksFor": {
       "@type": "Organization",
       "name": "Oriiface Dental Care & Maxillofacial Center"
     }
   }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where is the best dental clinic in Rohtak?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oriiface Dental Care & Maxillofacial Center, led by Dr. Vikramjeet (MDS PGIMS Rohtak), is located at 19, Delhi Road, Delhi Bypass Chowk, Rohtak, Haryana 124021. Call 095406 70276."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Oriiface Dental offer dental implants in Rohtak?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Oriiface Dental Care provides permanent dental implants in Rohtak placed by Dr. Vikramjeet, an MDS-qualified Oral & Maxillofacial Surgeon from PGIMS Rohtak."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is root canal treatment (RCT) painful?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Modern root canal treatment at Oriiface Dental Care in Rohtak is performed under local anesthesia and is essentially painless. Dr. Vikramjeet uses rotary endodontics for fast, precise results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are Oriiface Dental clinic timings in Rohtak?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oriiface Dental Care is open Monday to Saturday: 9:00 AM to 2:00 PM and 5:00 PM to 9:00 PM. For appointments call 095406 70276."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is the dentist at Oriiface Dental Care Rohtak?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dr. Vikramjeet, BDS and MDS (PGIMS Rohtak) in Oral & Maxillofacial Surgery. He is an Ex-Senior Resident at JLNMCH and a specialist in complex extractions, dental implants, jaw surgery, and smile design in Rohtak."
+      }
+    }
+  ]
 }
   </script>
 </head>
